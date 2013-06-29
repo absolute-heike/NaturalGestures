@@ -127,11 +127,11 @@ extern inline CGRect  MB_CGRectInterpolation(CGRect rect1, CGRect rect2, CGFloat
         }   break;
         case UIGestureRecognizerStateChanged:
         {
+            self.targetView.bounds   = MB_CGRectInterpolation(_bigBounds, _smallBounds, scale);
+            
             if (self.scaleDidChangeBlock) {
                 self.scaleDidChangeBlock(scale);
             }
-            
-            self.targetView.bounds   = MB_CGRectInterpolation(_bigBounds, _smallBounds, scale);
         }   break;
         case UIGestureRecognizerStateEnded:
         case UIGestureRecognizerStateCancelled:
