@@ -22,6 +22,7 @@
 		0A88D182177F1CC100C66CF7 /* image_800.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A88D180177F1CC100C66CF7 /* image_800.jpg */; };
 		0A88D183177F1CC100C66CF7 /* image_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A88D181177F1CC100C66CF7 /* image_1024.jpg */; };
 		0A88D186177F1DE800C66CF7 /* MBNaturalGestureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88D185177F1DE800C66CF7 /* MBNaturalGestureHandler.m */; };
+		0A88D18A177F223B00C66CF7 /* UIView+MBNaturalGestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88D189177F223B00C66CF7 /* UIView+MBNaturalGestures.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,9 @@
 		0A88D181177F1CC100C66CF7 /* image_1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_1024.jpg; sourceTree = "<group>"; };
 		0A88D184177F1DE800C66CF7 /* MBNaturalGestureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBNaturalGestureHandler.h; path = NaturalGestures/MBNaturalGestureHandler.h; sourceTree = SOURCE_ROOT; };
 		0A88D185177F1DE800C66CF7 /* MBNaturalGestureHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBNaturalGestureHandler.m; path = NaturalGestures/MBNaturalGestureHandler.m; sourceTree = SOURCE_ROOT; };
+		0A88D187177F220B00C66CF7 /* MBNaturalGestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBNaturalGestures.h; path = NaturalGestures/MBNaturalGestures.h; sourceTree = SOURCE_ROOT; };
+		0A88D188177F223B00C66CF7 /* UIView+MBNaturalGestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MBNaturalGestures.h"; path = "NaturalGestures/UIView+MBNaturalGestures.h"; sourceTree = SOURCE_ROOT; };
+		0A88D189177F223B00C66CF7 /* UIView+MBNaturalGestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MBNaturalGestures.m"; path = "NaturalGestures/UIView+MBNaturalGestures.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +127,11 @@
 		0A88D17F177F19E200C66CF7 /* NaturalGestures */ = {
 			isa = PBXGroup;
 			children = (
+				0A88D187177F220B00C66CF7 /* MBNaturalGestures.h */,
 				0A88D184177F1DE800C66CF7 /* MBNaturalGestureHandler.h */,
 				0A88D185177F1DE800C66CF7 /* MBNaturalGestureHandler.m */,
+				0A88D188177F223B00C66CF7 /* UIView+MBNaturalGestures.h */,
+				0A88D189177F223B00C66CF7 /* UIView+MBNaturalGestures.m */,
 			);
 			name = NaturalGestures;
 			sourceTree = "<group>";
@@ -203,6 +210,7 @@
 				0A88D167177F186400C66CF7 /* MBAppDelegate.m in Sources */,
 				0A88D176177F186400C66CF7 /* MBViewController.m in Sources */,
 				0A88D186177F1DE800C66CF7 /* MBNaturalGestureHandler.m in Sources */,
+				0A88D18A177F223B00C66CF7 /* UIView+MBNaturalGestures.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
