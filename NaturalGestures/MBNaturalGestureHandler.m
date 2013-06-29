@@ -21,6 +21,10 @@
 -(IBAction)handleRotation:(id)sender;
 -(IBAction)handlePan:(id)sender;
 
+extern inline BOOL    MB_CGRectIsGreaterThanRect(CGRect rect1, CGRect rect2);
+extern inline CGPoint MB_CGPointAddPoint(CGPoint point1, CGPoint point2);
+extern inline CGRect  MB_CGRectInterpolation(CGRect rect1, CGRect rect2, CGFloat percentage);
+
 @end
 
 
@@ -48,9 +52,9 @@
         
         self.completion = completion;
         
-        UIPinchGestureRecognizer *pinch     = [[UIPinchGestureRecognizer alloc]     initWithTarget:self action:@selector(handlePinch:)];
+        UIPinchGestureRecognizer    *pinch  = [[UIPinchGestureRecognizer alloc]     initWithTarget:self action:@selector(handlePinch:)];
         UIRotationGestureRecognizer *rotate = [[UIRotationGestureRecognizer alloc]  initWithTarget:self action:@selector(handleRotation:)];
-        UIPanGestureRecognizer *pan         = [[UIPanGestureRecognizer alloc]       initWithTarget:self action:@selector(handlePan:)];
+        UIPanGestureRecognizer      *pan    = [[UIPanGestureRecognizer alloc]       initWithTarget:self action:@selector(handlePan:)];
         
         pinch.delegate  = self;
         rotate.delegate = self;
@@ -59,10 +63,15 @@
         pan.minimumNumberOfTouches = 2;
         pan.maximumNumberOfTouches = 2;
         
-        //Memory Management --> View should maintain the natural gesture handler until the view is destroyed
-        objc_setAssociatedObject(view, &MB_NATURAL_GESTURE_RECOGNIZER_VIEW_KEY, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        [view addGestureRecognizer:pinch];
+        [view addGestureRecognizer:rotate];
+        [view addGestureRecognizer:pan];
         
         self.targetView = view;
+        
+        self.pinch      = pinch;
+        self.rotate     = rotate;
+        self.pan        = pan;
     }
     
     return self;
@@ -74,18 +83,6 @@
     [view removeGestureRecognizer:self.rotate];
     
     self.targetView = nil;
-    
-    objc_setAssociatedObject(view,              &MB_NATURAL_GESTURE_RECOGNIZER_VIEW_KEY, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
--(void)setTargetView:(UIView *)targetView {
-    //remove old connection
-    objc_setAssociatedObject(self.targetView, &MB_NATURAL_GESTURE_TARGET_VIEW_KEY, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
-    _targetView = targetView;
-    
-    //assign new connection
-    objc_setAssociatedObject(targetView, &MB_NATURAL_GESTURE_TARGET_VIEW_KEY, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)setFromBounds:(CGRect)fromBounds toBounds:(CGRect)toBounds {
@@ -178,11 +175,11 @@
 
 #pragma mark - Geometry
 
-inline BOOL    MB_CGRectIsGreaterThanRect(CGRect rect1, CGRect rect2) {
+extern inline BOOL    MB_CGRectIsGreaterThanRect(CGRect rect1, CGRect rect2) {
     return (rect1.size.height + rect1.size.width) > (rect2.size.height + rect2.size.width);
 }
 
-inline CGRect MB_CGRectInterpolation(CGRect rect1, CGRect rect2, CGFloat percentage) {
+extern inline CGRect MB_CGRectInterpolation(CGRect rect1, CGRect rect2, CGFloat percentage) {
     CGRect interpolatedRect      = CGRectZero;
     
     interpolatedRect.origin.x    = ((rect1.origin.x     - rect2.origin.x)       * (percentage)) + rect2.origin.x;
@@ -193,7 +190,7 @@ inline CGRect MB_CGRectInterpolation(CGRect rect1, CGRect rect2, CGFloat percent
     return interpolatedRect;
 }
 
-inline CGPoint MB_CGPointAddPoint(CGPoint point1, CGPoint point2) {
+extern inline CGPoint MB_CGPointAddPoint(CGPoint point1, CGPoint point2) {
     return CGPointMake(point1.x + point2.x, point1.y + point2.y);
 }
 

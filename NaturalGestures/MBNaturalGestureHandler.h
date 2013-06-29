@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-static char MB_NATURAL_GESTURE_RECOGNIZER_VIEW_KEY;
-static char MB_NATURAL_GESTURE_TARGET_VIEW_KEY;
 
 @interface MBNaturalGestureHandler : NSObject <UIGestureRecognizerDelegate>
 

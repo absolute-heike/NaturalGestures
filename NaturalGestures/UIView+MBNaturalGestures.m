@@ -9,6 +9,8 @@
 #import "UIView+MBNaturalGestures.h"
 #import <objc/runtime.h>
 
+static char MB_NATURAL_GESTURE_RECOGNIZER_VIEW_KEY;
+
 @implementation UIView (MBNaturalGestures)
 
 -(MBNaturalGestureHandler *)addNaturalGesturesWithFromBounds:(CGRect)fromBounds
@@ -26,18 +28,24 @@
         return naturalGestureHandler;
     }
     
-    return [[MBNaturalGestureHandler alloc] initWithView:self
-                                             startBounds:fromBounds
-                                               endBounds:toBounds
-                                              completion:completion];
+    MBNaturalGestureHandler *handler = [[MBNaturalGestureHandler alloc] initWithView:self
+                                                                          fromBounds:fromBounds
+                                                                            toBounds:toBounds
+                                                                          completion:completion];
+    
+    objc_setAssociatedObject(self, &MB_NATURAL_GESTURE_RECOGNIZER_VIEW_KEY, handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    return handler;
 }
 
 - (MBNaturalGestureHandler *)naturalGestureHandler {
-    return objc_getAssociatedObject(self, &MB_NATURAL_GESTURE_TARGET_VIEW_KEY);
+    return objc_getAssociatedObject(self, &MB_NATURAL_GESTURE_RECOGNIZER_VIEW_KEY);
 }
 
 - (void)removeNaturalGestureHandler {
     [self.naturalGestureHandler removeFromView:self];
+    
+    objc_setAssociatedObject(self, &MB_NATURAL_GESTURE_RECOGNIZER_VIEW_KEY, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
