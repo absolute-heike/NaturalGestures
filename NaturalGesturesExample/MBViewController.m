@@ -24,12 +24,6 @@
 
 @implementation MBViewController
 
-
-- (void)dealloc
-{
-    NSLog(@"huhu");
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
