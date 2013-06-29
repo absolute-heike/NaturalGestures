@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A75883F177F6C780061E777 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0A75883E177F6C780061E777 /* LICENSE */; };
 		0A88D157177F186400C66CF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A88D156177F186400C66CF7 /* UIKit.framework */; };
 		0A88D159177F186400C66CF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A88D158177F186400C66CF7 /* Foundation.framework */; };
 		0A88D15B177F186400C66CF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A88D15A177F186400C66CF7 /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A75883E177F6C780061E777 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		0A88D153177F186400C66CF7 /* NaturalGesturesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaturalGesturesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A88D156177F186400C66CF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A88D158177F186400C66CF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				0A88D15E177F186400C66CF7 /* NaturalGesturesExample-Info.plist */,
+				0A75883E177F6C780061E777 /* LICENSE */,
 				0A88D15F177F186400C66CF7 /* InfoPlist.strings */,
 				0A88D162177F186400C66CF7 /* main.m */,
 				0A88D164177F186400C66CF7 /* NaturalGesturesExample-Prefix.pch */,
@@ -192,6 +195,7 @@
 				0A88D170177F186400C66CF7 /* MainStoryboard_iPhone.storyboard in Resources */,
 				0A88D173177F186400C66CF7 /* MainStoryboard_iPad.storyboard in Resources */,
 				0A88D183177F1CC100C66CF7 /* image_1024.jpg in Resources */,
+				0A75883F177F6C780061E777 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
