@@ -34,6 +34,8 @@
 {
     [super viewDidLoad];
     
+    //photo by Peter Nijenhuis / http://www.flickr.com/photos/peternijenhuis/
+    
     //UI Stuff
     self.smallView.layer.borderColor = [UIColor darkGrayColor].CGColor;
     self.bigView.layer.borderColor   = [UIColor darkGrayColor].CGColor;
@@ -41,6 +43,7 @@
     self.smallView.layer.borderWidth = 1.0;
     self.bigView.layer.borderWidth   = 1.0f;
 	
+    ///////////////////////////////////////////////////////////////////
     //Setup Gestures
     __weak MBViewController *wself = self;
     
