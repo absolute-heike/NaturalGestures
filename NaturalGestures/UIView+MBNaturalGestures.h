@@ -12,7 +12,7 @@
 
 @interface UIView (MBNaturalGestures)
 
-- (MBNaturalGestureHandler *)addNaturalGesturesWithFromBounds:(CGRect)fromBounds toBounds:(CGRect)toBounds completion:(void (^)(BOOL shouldClose))completion;
+- (MBNaturalGestureHandler *)addNaturalGesturesFromBounds:(CGRect)fromBounds toBounds:(CGRect)toBounds completion:(void (^)(BOOL shouldClose))completion;
 - (MBNaturalGestureHandler *)naturalGestureHandler;
 - (void)removeNaturalGestureHandler;
 

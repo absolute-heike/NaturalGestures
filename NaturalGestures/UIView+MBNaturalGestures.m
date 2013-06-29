@@ -13,9 +13,9 @@ static char MB_NATURAL_GESTURE_RECOGNIZER_VIEW_KEY;
 
 @implementation UIView (MBNaturalGestures)
 
--(MBNaturalGestureHandler *)addNaturalGesturesWithFromBounds:(CGRect)fromBounds
-                                                    toBounds:(CGRect)toBounds
-                                                  completion:(void (^)(BOOL))completion {
+- (MBNaturalGestureHandler *)addNaturalGesturesFromBounds:(CGRect)fromBounds
+                                                 toBounds:(CGRect)toBounds
+                                               completion:(void (^)(BOOL shouldClose))completion {
     if (self.naturalGestureHandler) {
         //reuse existing gestureHandler
         MBNaturalGestureHandler *naturalGestureHandler  = self.naturalGestureHandler;

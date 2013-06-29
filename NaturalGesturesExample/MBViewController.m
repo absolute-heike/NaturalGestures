@@ -39,7 +39,7 @@
     //Setup Gestures
     __weak MBViewController *wself = self;
     
-    [self.imageView addNaturalGesturesWithFromBounds:self.bigView.bounds toBounds:self.smallView.bounds completion:^(BOOL shouldClose) {
+    [self.imageView addNaturalGesturesFromBounds:self.bigView.bounds toBounds:self.smallView.bounds completion:^(BOOL shouldClose) {
         CGRect toFrame = shouldClose ? wself.smallView.frame : wself.bigView.frame;
         
         [UIView animateWithDuration:0.3 animations:^{
