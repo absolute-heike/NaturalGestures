@@ -64,17 +64,6 @@
     <resources>
         <image name="image_1024.jpg" width="1024" height="768"/>
     </resources>
-    <classes>
-        <class className="MBViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MBViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bigView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="progressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="smallView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
