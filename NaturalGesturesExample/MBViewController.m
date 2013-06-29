@@ -42,6 +42,8 @@
             wself.imageView.transform = CGAffineTransformIdentity;
             wself.imageView.frame     = toFrame;
         }];
+        
+        wself.progressLabel.text      = nil;
     }];
     
     [self.imageView.naturalGestureHandler setScaleDidChangeBlock:^(CGFloat scale) {

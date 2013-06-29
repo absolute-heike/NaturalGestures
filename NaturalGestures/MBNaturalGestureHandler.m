@@ -11,6 +11,8 @@
 
 @interface MBNaturalGestureHandler () {
     CGPoint _startCenterPoint;
+    
+    CGFloat _direction;
 }
 
 @property (nonatomic, retain) UIGestureRecognizer *pan;
@@ -107,14 +109,16 @@ extern inline CGRect  MB_CGRectInterpolation(CGRect rect1, CGRect rect2, CGFloat
 }
 
 -(IBAction)handlePinch:(UIPinchGestureRecognizer *)pinchRecognizer {
-    CGFloat scale = MIN(MAX(pinchRecognizer.scale - 0.4f,0.0f) / 0.6f,1.0f);
+    CGFloat scale = MIN(MAX((pinchRecognizer.scale - _direction) - 0.4f,0.0f) / 0.6f,1.0f);
     
     switch (pinchRecognizer.state) {
         case UIGestureRecognizerStateBegan:
         {
             //check if the recognizer is moving from big to small bounds or vica versa
             if (CGRectEqualToRect(self.targetView.bounds, _smallBounds)) {
-                pinchRecognizer.scale = 0.0;
+                _direction = 1.0;
+            }else {
+                _direction = 0.0;
             }
             
             if (self.gestureWillStartBlock) {
