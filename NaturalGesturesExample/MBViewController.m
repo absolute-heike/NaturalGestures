@@ -8,6 +8,7 @@
 
 #import "MBViewController.h"
 #import "MBNaturalGestures.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface MBViewController ()
@@ -32,7 +33,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //UI Stuff
+    self.smallView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    self.bigView.layer.borderColor   = [UIColor darkGrayColor].CGColor;
+    
+    self.smallView.layer.borderWidth = 1.0;
+    self.bigView.layer.borderWidth   = 1.0f;
 	
+    //Setup Gestures
     __weak MBViewController *wself = self;
     
     [self.imageView addNaturalGesturesWithFromBounds:self.bigView.bounds toBounds:self.smallView.bounds completion:^(BOOL shouldClose) {
@@ -49,8 +58,8 @@
     [self.imageView.naturalGestureHandler setScaleDidChangeBlock:^(CGFloat scale) {
         wself.progressLabel.text = [NSString stringWithFormat:@"%.0f%%",scale * 100.0];
         
-        wself.smallView.alpha    = 1.0-scale;
-        wself.bigView.alpha      = scale;
+        wself.smallView.backgroundColor = [UIColor colorWithWhite:0.66 alpha:1.0-scale];
+        wself.bigView.backgroundColor   = [UIColor colorWithWhite:0.66 alpha:scale];
     }];
 }
 
