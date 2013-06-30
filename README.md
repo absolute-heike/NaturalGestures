@@ -4,6 +4,8 @@ NaturalGestures
 Swipe, Rotate and Pinch a View between two states with just **one method call**.
 You can even add a block to dynamically tweak the UI according to the current scale.
 
+[![screencast](https://dl.dropboxusercontent.com/u/89042933/NaturalGesturesVideoPreview.png)](https://www.youtube.com/watch?v=ErrED69Ij5k)
+
 ```objc
 #import "MBNaturalGestures.h"
 
