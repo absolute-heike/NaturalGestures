@@ -17,7 +17,6 @@
 		0A88D169177F186400C66CF7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A88D168177F186400C66CF7 /* Default.png */; };
 		0A88D16B177F186400C66CF7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A88D16A177F186400C66CF7 /* Default@2x.png */; };
 		0A88D16D177F186400C66CF7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A88D16C177F186400C66CF7 /* Default-568h@2x.png */; };
-		0A88D170177F186400C66CF7 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A88D16E177F186400C66CF7 /* MainStoryboard_iPhone.storyboard */; };
 		0A88D173177F186400C66CF7 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A88D171177F186400C66CF7 /* MainStoryboard_iPad.storyboard */; };
 		0A88D176177F186400C66CF7 /* MBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88D175177F186400C66CF7 /* MBViewController.m */; };
 		0A88D183177F1CC100C66CF7 /* image_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A88D181177F1CC100C66CF7 /* image_1024.jpg */; };
@@ -40,7 +39,6 @@
 		0A88D168177F186400C66CF7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0A88D16A177F186400C66CF7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0A88D16C177F186400C66CF7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		0A88D16F177F186400C66CF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		0A88D172177F186400C66CF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0A88D174177F186400C66CF7 /* MBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBViewController.h; sourceTree = "<group>"; };
 		0A88D175177F186400C66CF7 /* MBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBViewController.m; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			children = (
 				0A88D165177F186400C66CF7 /* MBAppDelegate.h */,
 				0A88D166177F186400C66CF7 /* MBAppDelegate.m */,
-				0A88D16E177F186400C66CF7 /* MainStoryboard_iPhone.storyboard */,
 				0A88D171177F186400C66CF7 /* MainStoryboard_iPad.storyboard */,
 				0A88D174177F186400C66CF7 /* MBViewController.h */,
 				0A88D175177F186400C66CF7 /* MBViewController.m */,
@@ -192,7 +189,6 @@
 				0A88D169177F186400C66CF7 /* Default.png in Resources */,
 				0A88D16B177F186400C66CF7 /* Default@2x.png in Resources */,
 				0A88D16D177F186400C66CF7 /* Default-568h@2x.png in Resources */,
-				0A88D170177F186400C66CF7 /* MainStoryboard_iPhone.storyboard in Resources */,
 				0A88D173177F186400C66CF7 /* MainStoryboard_iPad.storyboard in Resources */,
 				0A88D183177F1CC100C66CF7 /* image_1024.jpg in Resources */,
 				0A75883F177F6C780061E777 /* LICENSE in Resources */,
@@ -223,14 +219,6 @@
 				0A88D160177F186400C66CF7 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0A88D16E177F186400C66CF7 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A88D16F177F186400C66CF7 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		0A88D171177F186400C66CF7 /* MainStoryboard_iPad.storyboard */ = {
@@ -309,6 +297,7 @@
 				GCC_PREFIX_HEADER = "NaturalGesturesExample/NaturalGesturesExample-Prefix.pch";
 				INFOPLIST_FILE = "NaturalGesturesExample/NaturalGesturesExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -320,6 +309,7 @@
 				GCC_PREFIX_HEADER = "NaturalGesturesExample/NaturalGesturesExample-Prefix.pch";
 				INFOPLIST_FILE = "NaturalGesturesExample/NaturalGesturesExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
