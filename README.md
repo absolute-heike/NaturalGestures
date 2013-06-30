@@ -33,7 +33,7 @@ An example App is included.
 
 --------------
 #### possible improvements ####
-- in case you don't need the 2 uiview states, you could just set the view transform instead, which would be much better in this case
+- in case aspect ratio of the 2 uiview states is the same, you could just set the view transform instead, which would be much better and faster in that case
 - example project could be better
 - ??? I am thrilled, what you guys come up with :)
 
