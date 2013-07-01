@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A32FA2917810A5B00EB6883 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A32FA2717810A5B00EB6883 /* icon.png */; };
+		0A32FA2A17810A5B00EB6883 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A32FA2817810A5B00EB6883 /* icon@2x.png */; };
 		0A75883F177F6C780061E777 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0A75883E177F6C780061E777 /* LICENSE */; };
 		0A88D157177F186400C66CF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A88D156177F186400C66CF7 /* UIKit.framework */; };
 		0A88D159177F186400C66CF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A88D158177F186400C66CF7 /* Foundation.framework */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A32FA2717810A5B00EB6883 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		0A32FA2817810A5B00EB6883 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		0A75883E177F6C780061E777 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		0A88D153177F186400C66CF7 /* NaturalGesturesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaturalGesturesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A88D156177F186400C66CF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -117,6 +121,8 @@
 				0A88D16A177F186400C66CF7 /* Default@2x.png */,
 				0A88D16C177F186400C66CF7 /* Default-568h@2x.png */,
 				0A88D181177F1CC100C66CF7 /* image_1024.jpg */,
+				0A32FA2717810A5B00EB6883 /* icon.png */,
+				0A32FA2817810A5B00EB6883 /* icon@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,6 +198,8 @@
 				0A88D173177F186400C66CF7 /* MainStoryboard_iPad.storyboard in Resources */,
 				0A88D183177F1CC100C66CF7 /* image_1024.jpg in Resources */,
 				0A75883F177F6C780061E777 /* LICENSE in Resources */,
+				0A32FA2917810A5B00EB6883 /* icon.png in Resources */,
+				0A32FA2A17810A5B00EB6883 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
